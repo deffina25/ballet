@@ -1,5 +1,6 @@
 {
   "name": "ballet",
+  "homepage": "deffina25.github.io/ballet/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,8 +8,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "я  preview",
-    "postbuild": "react-snap"
+    "preview": "vite preview",
+    "postbuild": "react-snap",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.3.1",
