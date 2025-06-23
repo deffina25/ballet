@@ -1,5 +1,6 @@
 {
   "name": "ballet",
+  "homepage": "https://deffina25.github.io/ballet",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -39,6 +40,7 @@
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^16.0.0",
     "install": "^0.13.0",
     "npm": "^11.4.2",
