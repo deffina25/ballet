@@ -1,11 +1,13 @@
 import { useEffect, useReducer } from 'react';
-import { BrowserRouter, useRoutes } from 'react-router-dom';
+import {  useRoutes } from 'react-router-dom';
 import { AppContext } from './AppContext.tsx';
 import { appReducer, initialState } from './reduser/Reduser.ts';
 import i18next from 'i18next';
 import routes from '~react-pages';
 import { Header } from './component/Header';
 import { Footer } from './component/Footer';
+import { HashRouter } from 'react-router-dom';
+
 import './App.css';
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
   }, [state?.lang]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppContext.Provider value={value}>
         {/*<Donate />*/}
         <Header />
@@ -27,7 +29,7 @@ function App() {
         </main>
         <Footer />
       </AppContext.Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
