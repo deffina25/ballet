@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+:root {
+  --font-playfair: "Playfair Display", sans-serif;
+  --font-work: "Work Sans", sans-serif;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), sans-serif;
+}
+
+.font-work {
+  font-family: var(--font-work), sans-serif;
+}
+
+body {
+  background-color: #111117;
+  color: #ffffff;
+  background-position: right 0 top 313px;
+  background-image: url('./bg.png');
+  background-repeat: no-repeat;
+  font-family: var(--font-work), sans-serif;
+}
+
+.gradient-border-bottom {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%);
+  }
+}
+
+.gradient-border-top {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%);
+  }
+}
+
+.wrapper-subscribe {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("./bg-subscribe.jpg");
+}
+
+.events-slider {
+  transition: all 0.3s ease-out;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.slide-down {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.events-container {
+  will-change: transform;
+}
+
+.events-container article {
+  will-change: transform;
+  transform-origin: center center;
+}
+
+
+/*#root {*/
+/*  max-width: 1170px;*/
+/*  margin: 0 auto;*/
+/*  padding: 0 1rem;*/
+/*}*/

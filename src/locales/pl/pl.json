@@ -1,0 +1,16 @@
+{
+  "menu": {
+    "m0": "Home",
+    "m1": "About",
+    "m2": "Productions",
+    "m3": "Events",
+    "m4": "News",
+    "m5": "Contact",
+    "m6": "n’ERA",
+    "m7": "Vladislav & Veronika"
+  },
+  "language": {
+    "pl": "Pl",
+    "en": "En"
+  }
+}
