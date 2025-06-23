@@ -66,7 +66,7 @@ export const Menu: React.FC<Props> = ({ isMobile = false }) => {
               className={`${
                 isMobile
                   ? 'mt-4 w-full'
-                  : 'absolute top-[calc(100%+15px)] left-1/2 -translate-x-1/2'
+                  : 'absolute top-[calc(100%+15px)] left-1/2 min-w-[112px] -translate-x-1/2'
               } z-50 flex flex-col bg-black`}
             >
               {children.map((child, index) => (

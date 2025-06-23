@@ -1,13 +1,12 @@
 import { useEffect, useReducer } from 'react';
-import {  useRoutes } from 'react-router-dom';
+import { BrowserRouter, useRoutes } from 'react-router-dom';
 import { AppContext } from './AppContext.tsx';
 import { appReducer, initialState } from './reduser/Reduser.ts';
-import i18next from 'i18next';
-import routes from '~react-pages';
 import { Header } from './component/Header';
 import { Footer } from './component/Footer';
-import { HashRouter } from 'react-router-dom';
-
+import { Donate } from './module/Donate/Donate.tsx';
+import i18next from 'i18next';
+import routes from '~react-pages';
 import './App.css';
 
 function App() {
@@ -20,16 +19,16 @@ function App() {
   }, [state?.lang]);
 
   return (
-    <HashRouter>
+    <BrowserRouter>
       <AppContext.Provider value={value}>
-        {/*<Donate />*/}
+        <Donate />
         <Header />
         <main className="mt-[52px] w-full">
           <RouterView />
         </main>
         <Footer />
       </AppContext.Provider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
