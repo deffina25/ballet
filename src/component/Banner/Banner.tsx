@@ -15,7 +15,7 @@ export const Banner = () => {
       <div className="relative top-[22px] container mx-auto max-w-[1202px] px-4">
         <button
           onClick={() => setPlay((prev) => !prev)}
-          className="transaction-all absolute top-0 right-4 z-10 cursor-pointer duration-400 hover:opacity-[0.5]"
+          className="transaction-all absolute top-0 right-[27px] z-10 cursor-pointer duration-400 hover:opacity-[0.5]"
         >
           {!play ? <PlayIcon /> : <StopIcon />}
         </button>

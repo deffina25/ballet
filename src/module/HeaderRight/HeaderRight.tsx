@@ -44,12 +44,15 @@ export const HeaderRight = () => {
         <span>subscribe</span>
       </ScrollLink>
       <Language />
-      <Link to="#" className="transition-all duration-400 hover:opacity-[0.7]">
+      <Link
+        to="#"
+        className="flex h-[32px] w-[32px] items-center justify-center transition-all duration-400 hover:opacity-[0.7]"
+      >
         <InstagramIcon />
       </Link>
       <Link
         to="#"
-        className="ml-[6px] transition-all duration-400 hover:opacity-[0.7]"
+        className="ml-[6px] flex h-[32px] w-[32px] items-center justify-center transition-all duration-400 hover:opacity-[0.7]"
       >
         <FacebookIcon />
       </Link>
