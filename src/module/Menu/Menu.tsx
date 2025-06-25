@@ -96,16 +96,14 @@ export const Menu: React.FC<Props> = ({ isMobile = false }) => {
   };
 
   return (
-    <div className="w-full">
-      <ul
-        className={`font-work ${
-          isMobile
-            ? 'flex flex-col items-start gap-y-2'
-            : 'flex items-center gap-x-[14px]'
-        } text-[0.938rem] font-light tracking-[0.188rem] uppercase`}
-      >
-        {renderMenu()}
-      </ul>
-    </div>
+    <ul
+      className={`font-work ${
+        isMobile
+          ? 'flex flex-col items-start gap-y-2'
+          : 'flex items-center gap-x-[14px]'
+      } text-[0.938rem] font-light tracking-[0.188rem] uppercase`}
+    >
+      {renderMenu()}
+    </ul>
   );
 };

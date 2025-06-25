@@ -2,15 +2,16 @@ import RightIcon from '../../../public/right.svg?react';
 
 export const PeopleUser = () => {
   return (
-    <section className="container mx-auto grid min-h-[934px] max-w-[1202px] grid-cols-1 justify-between px-4 pt-[62px] pb-[71px] md:pb-[138px] xl:grid-cols-2">
-      <article className="mt-0 text-center md:mt-[74px]">
+    <section className="container mx-auto grid min-h-[934px] max-w-[1202px] grid-cols-1 justify-between px-4 pt-[71px] pb-[71px] md:pb-[138px] xl:grid-cols-2">
+      <article className="mt-0 text-center md:mt-[80px]">
         <img
           src="./vladislay-veronika.jpg"
+          className="h-[645px] w-[470px] object-cover"
           alt="Vladyslav Detiuchenko and Veronika Rakitina"
         />
       </article>
       <article>
-        <h2 className="font-playfair mt-[10px] text-center text-[30px] leading-normal font-bold tracking-[0.125rem] uppercase md:mt-0 md:text-[4.875rem] md:leading-[87px] xl:text-right">
+        <h2 className="font-playfair mt-[10px] text-center text-[30px] leading-[110.00000000000001%] font-bold tracking-[0.125rem] uppercase md:mt-0 md:text-[4.875rem] md:leading-[87px] xl:text-right">
           Vladyslav{' '}
           <span className="text-5 font-semibold tracking-[0.125rem] md:text-[4.875rem]">
             &
@@ -18,7 +19,7 @@ export const PeopleUser = () => {
           veronika
         </h2>
 
-        <div className="mt-[20px] w-full text-center text-base leading-normal font-normal md:mt-[4.563rem] md:text-left md:leading-[110.00000000000001%] xl:max-w-[469px]">
+        <div className="mt-[20px] w-full text-center text-base leading-normal font-normal md:mt-[69px] md:text-left md:leading-[110.00000000000001%] xl:max-w-[469px]">
           <p>
             Vladyslav Detiuchenko and Veronika Rakitina are dancers,
             choreographers, and artistic directors of n’Era Dance Productions.
