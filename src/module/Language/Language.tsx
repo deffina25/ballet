@@ -17,7 +17,7 @@ export const Language = () => {
   };
 
   return (
-    <div className="relative mr-[10px]">
+    <div className="relative w-[54px]">
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="flex cursor-pointer items-center gap-x-[5px] text-sm font-light tracking-[2px]"

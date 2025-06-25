@@ -47,7 +47,10 @@ export const HeaderRight = () => {
       <Link to="#" className="transition-all duration-400 hover:opacity-[0.7]">
         <InstagramIcon />
       </Link>
-      <Link to="#" className="transition-all duration-400 hover:opacity-[0.7]">
+      <Link
+        to="#"
+        className="ml-[6px] transition-all duration-400 hover:opacity-[0.7]"
+      >
         <FacebookIcon />
       </Link>
     </div>
