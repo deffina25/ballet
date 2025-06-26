@@ -15,7 +15,7 @@ export const Header = () => {
     <header className="fixed top-0 right-0 left-0 z-50 bg-[#111117]">
       <div className="gradient-border-bottom">
         <div className="container mx-auto max-w-[1202px] px-4">
-          <div className="flex h-[52px] items-center justify-between gap-[70px]">
+          <div className="flex h-[52px] items-center justify-between gap-4 xl:gap-[70px]">
             <Link
               to="/"
               className="transition-all duration-400 hover:opacity-[0.7]"

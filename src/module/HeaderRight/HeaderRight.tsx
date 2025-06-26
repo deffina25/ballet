@@ -36,10 +36,10 @@ export const HeaderRight = () => {
   };
 
   return (
-    <div className={'flex items-center gap-x-2'}>
+    <div className="flex items-center gap-x-[7px] lg:gap-x-2">
       <ScrollLink
         to="#subscribe"
-        className="font-work mr-6 flex h-8 w-[7.375rem] items-center justify-center bg-[#FFD700] p-[0.313rem] text-sm font-black text-black uppercase transition-all duration-400 hover:opacity-[0.7]"
+        className="font-work mr-0 flex h-8 w-[7.375rem] items-center justify-center bg-[#FFD700] p-[0.313rem] text-sm font-black text-black uppercase transition-all duration-400 hover:opacity-[0.7] lg:mr-6"
       >
         <span>subscribe</span>
       </ScrollLink>
@@ -52,7 +52,7 @@ export const HeaderRight = () => {
       </Link>
       <Link
         to="#"
-        className="ml-[6px] flex h-[32px] w-[32px] items-center justify-center transition-all duration-400 hover:opacity-[0.7]"
+        className="ml-0 flex h-[32px] w-[32px] items-center justify-center transition-all duration-400 hover:opacity-[0.7] lg:ml-[6px]"
       >
         <FacebookIcon />
       </Link>
