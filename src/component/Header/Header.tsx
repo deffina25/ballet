@@ -30,7 +30,7 @@ export const Header = () => {
 
             {/* mobile  */}
             <button
-              className="flex h-8 w-8 flex-col items-center justify-center min-[1065px]:hidden"
+              className="box-content flex h-8 w-8 cursor-pointer flex-col items-center justify-center p-[10px] min-[1065px]:hidden"
               onClick={toggleMobileMenu}
               aria-label="Toggle menu"
             >
