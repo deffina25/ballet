@@ -2,16 +2,16 @@ import RightIcon from '../../../public/right.svg?react';
 
 export const PeopleUser = () => {
   return (
-    <section className="container mx-auto grid min-h-[934px] max-w-[1202px] grid-cols-1 justify-between px-4 pt-[71px] pb-[71px] md:pb-[138px] xl:grid-cols-2">
-      <article className="mt-0 text-center md:mt-[80px]">
+    <section className="container mx-auto grid min-h-[934px] max-w-[1202px] grid-cols-1 justify-between gap-0 px-4 pt-[71px] pb-[71px] md:pb-[138px] lg:grid-cols-[470px_1fr] lg:gap-[50px] xl:gap-[130px]">
+      <article className="mt-0 text-center md:mt-[80px] xl:text-left">
         <img
           src="./vladislay-veronika.jpg"
-          className="h-[645px] w-[470px] object-cover"
+          className="inline-block h-auto w-auto object-cover xl:h-[645px] xl:w-[470px]"
           alt="Vladyslav Detiuchenko and Veronika Rakitina"
         />
       </article>
       <article>
-        <h2 className="font-playfair mt-[10px] text-center text-[30px] leading-[110.00000000000001%] font-bold tracking-[0.125rem] uppercase md:mt-0 md:text-[4.875rem] md:leading-[87px] xl:text-right">
+        <h2 className="font-playfair mt-[50px] text-center text-[30px] leading-[110.00000000000001%] font-bold tracking-[0.125rem] uppercase md:mt-0 md:text-[4.875rem] md:leading-[87px] xl:mt-[10px] xl:text-right">
           Vladyslav{' '}
           <span className="text-5 font-semibold tracking-[0.125rem] md:text-[4.875rem]">
             &
