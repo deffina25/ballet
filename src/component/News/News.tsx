@@ -26,7 +26,7 @@ export const News = () => {
   ];
   return (
     <section className="container mx-auto max-w-[1202px] px-4 pt-[6.375rem] pb-[5.813rem]">
-      <h2 className="font-playfair text-center text-[3.875rem] leading-normal font-bold tracking-[0.125rem] uppercase md:text-[4.875rem] xl:text-right">
+      <h2 className="font-playfair text-center text-[3.875rem] leading-normal font-bold tracking-[0.125rem] uppercase md:text-[4.875rem] lg:text-right">
         News
       </h2>
       <div className="mt-[6.188rem]">

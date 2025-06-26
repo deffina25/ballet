@@ -10,7 +10,7 @@ import { SliderSection } from '../component/SliderSection';
 export const Index = () => {
   return (
     <>
-      <Banner />
+      <Banner src="./banner.jpg" />
       <About />
       <PeopleUser />
       <SliderSection />

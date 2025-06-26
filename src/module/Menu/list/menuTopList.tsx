@@ -13,12 +13,12 @@ export const menuTopList = (t: TFunction) => [
       {
         id: '2-1',
         name: 'n’ERA',
-        href: '',
+        href: '/about/about-nera',
       },
       {
         id: '2-2',
         name: 'Vladislav & Veronika',
-        href: '',
+        href: '/about/vladislav-veronika',
       },
     ],
   },
