@@ -24,13 +24,13 @@ export const Header = () => {
             </Link>
 
             {/* desktop */}
-            <div className="hidden w-full items-end justify-end text-right min-[940px]:flex">
+            <div className="hidden w-full items-end justify-end text-right min-[1065px]:flex">
               <Menu />
             </div>
 
             {/* mobile  */}
             <button
-              className="flex h-8 w-8 flex-col items-center justify-center min-[940px]:hidden"
+              className="flex h-8 w-8 flex-col items-center justify-center min-[1065px]:hidden"
               onClick={toggleMobileMenu}
               aria-label="Toggle menu"
             >
@@ -47,7 +47,7 @@ export const Header = () => {
 
             {/* mobile*/}
             <div
-              className={`fixed top-[52px] left-0 h-[calc(100vh-52px)] w-full transform bg-[#111117] transition-transform duration-300 ease-in-out min-[940px]:hidden ${
+              className={`fixed top-[52px] left-0 h-[calc(100vh-52px)] w-full transform bg-[#111117] transition-transform duration-300 ease-in-out min-[1065px]:hidden ${
                 isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
               }`}
             >

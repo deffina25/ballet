@@ -17,7 +17,7 @@ export const Language = () => {
   };
 
   return (
-    <div className="relative w-auto lg:w-[54px]">
+    <div className="relative w-auto sm:w-[54px]">
       <div
         onClick={() => setIsOpen(!isOpen)}
         className="flex cursor-pointer items-center gap-x-[5px] text-sm font-light tracking-[2px]"
