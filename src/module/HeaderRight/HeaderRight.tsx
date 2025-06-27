@@ -1,8 +1,8 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { facebook, instagram } from '../../config.ts';
 import FacebookIcon from '../../../public/f.svg?react';
 import InstagramIcon from '../../../public/i.svg?react';
-import React from 'react';
-import { Language } from '../Language';
 
 export const HeaderRight = () => {
   const ScrollLink = ({
@@ -43,15 +43,17 @@ export const HeaderRight = () => {
       >
         <span>subscribe</span>
       </ScrollLink>
-      <Language />
+      {/*<Language />*/}
       <Link
-        to="#"
+        to={instagram}
+        target="_blank"
         className="flex h-[32px] w-[32px] items-center justify-center transition-all duration-400 hover:opacity-[0.7]"
       >
         <InstagramIcon />
       </Link>
       <Link
-        to="#"
+        target="_blank"
+        to={facebook}
         className="ml-0 flex h-[32px] w-[32px] items-center justify-center transition-all duration-400 hover:opacity-[0.7] sm:ml-[6px]"
       >
         <FacebookIcon />

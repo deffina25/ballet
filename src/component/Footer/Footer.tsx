@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import FacebookIcon from '../../../public/f.svg?react';
 import InstagramIcon from '../../../public/i.svg?react';
 import FooterIcon from '../../../public/footer-logo.svg?react';
+import { facebook, instagram } from '../../config.ts';
 
 export const Footer = () => {
   const phone = '+31684683368';
@@ -49,13 +50,15 @@ export const Footer = () => {
 
             <div className="flex justify-center gap-x-3.5 md:justify-start">
               <Link
-                to="#"
+                to={instagram}
+                target="_blank"
                 className="transition-all duration-400 hover:opacity-[0.7]"
               >
                 <InstagramIcon className="h-[40px] w-[40px] md:h-auto md:w-auto" />
               </Link>
               <Link
-                to="#"
+                to={facebook}
+                target="_blank"
                 className="inline-block transition-all duration-400 hover:opacity-[0.7]"
               >
                 <FacebookIcon className="h-[40px] w-[40px] md:h-auto md:w-auto" />

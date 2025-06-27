@@ -11,9 +11,6 @@ export const BoardMembers = () => {
         <h6 className="mb-[7px] font-bold">Supervisory Board</h6>
         <p>Andrew van Esch: Chairman</p>
         <p>Anno Fekkes: Secretary</p>
-        <p>Wade Warren</p>
-        <p>Cameron Williamson</p>
-        <p>Brooklyn Simmons</p>
       </article>
       <article className="mt-[36px] transition-all duration-400">
         <div>

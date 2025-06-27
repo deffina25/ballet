@@ -149,13 +149,7 @@ export const BlSlider: React.FC<PropType> = (props) => {
                 style={{ position: 'relative' }}
               >
                 <div className="embla__slide__img">
-                  <img
-                    width="570px"
-                    height="570px"
-                    className="h-full w-full"
-                    src={img}
-                    alt={img}
-                  />
+                  <img width="570px" height="570px" src={img} alt={img} />
                 </div>
                 {/* Можно добавить оверлей здесь в JSX вместо DOM-манипуляций */}
                 <div
