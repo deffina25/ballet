@@ -3,14 +3,10 @@ import type { EmblaOptionsType } from 'embla-carousel';
 
 export const SliderSection = () => {
   const OPTIONS: EmblaOptionsType = { loop: true };
-  const SLIDES = [
-    './slider/slide1.jpg',
-    './slider/slide2.jpg',
-    './slider/slide3.jpg',
-    './slider/slide1.jpg',
-    './slider/slide2.jpg',
-    './slider/slide3.jpg',
-  ];
+  const SLIDES = [];
+  for (let i = 1; i <= 15; i++) {
+    SLIDES.push(`./slider/slide${i}.jpg`);
+  }
 
   return (
     <div className="container mx-auto max-w-[1440px] pb-[86px]">
