@@ -26,7 +26,7 @@ export const BIPagination: React.FC<Props> = ({ pageSize, total }) => {
   };
 
   return (
-    <div className="mt-[60px] flex w-full items-center justify-center gap-x-3.5">
+    <div className="mt-[69px] flex w-full items-center justify-center gap-x-3.5">
       {Array.from({ length: totalPages }, (_, index) => {
         const page = index + 1;
         return (

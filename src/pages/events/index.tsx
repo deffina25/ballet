@@ -2,7 +2,7 @@ import { Banner } from '../../component/Banner';
 import { BIEvents } from '../../module/Bl-Events';
 import { BIPagination } from '../../module/BI-Pagination';
 
-export const Index = () => {
+const Index = () => {
   const eventsData = [
     {
       id: 1,

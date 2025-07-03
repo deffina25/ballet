@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios, { type AxiosResponse } from 'axios';
 import { AboutUs } from '../../../component/AboutUs';
 
-export const Index = () => {
+const Index = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
