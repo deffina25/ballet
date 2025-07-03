@@ -81,6 +81,14 @@ body {
   transform-origin: center center;
 }
 
+@layer utilities {
+  .custom-hover-border:hover,
+  .custom-hover-border.active {
+    border: 1px solid;
+    border-image-source: linear-gradient(135deg, #FFD700 0%, #0057B8 86.06%);
+    border-image-slice: 1;
+  }
+}
 
 /*#root {*/
 /*  max-width: 1170px;*/

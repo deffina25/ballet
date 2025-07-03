@@ -15,11 +15,11 @@ export const menuTopList = (t: TFunction) => [
         name: 'n’ERA',
         href: '/about/about-nera',
       },
-      // {
-      //   id: '2-2',
-      //   name: 'Vladislav & Veronika',
-      //   href: '/about/vladуslav-veronika',
-      // },
+      {
+        id: '2-2',
+        name: 'Vladislav & Veronika',
+        href: '/about/vladуslav-veronika',
+      },
     ],
   },
   // {

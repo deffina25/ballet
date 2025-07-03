@@ -33,10 +33,21 @@ export const About: React.FC<Props> = ({ more = true }) => {
 
   useEffect(() => {
     axios
-      .get<ApiResponse>('http://localhost:1337/api/about?populate=*')
+      .get<ApiResponse>('http://localhost:1337/api/home', {
+        params: {
+          populate: {
+            banner: {
+              populate: '*',
+            },
+            about: {
+              populate: '*',
+            },
+          },
+        },
+      })
       .then((response: any) => {
         console.log('response.data.data', response.data.data);
-        setAbout(response.data.data);
+        setAbout(response.data.data.about);
       })
       .catch((error: any) => {
         console.error('Ошибка при загрузке данных', error);

@@ -1,20 +1,13 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TopIcon from '../../../public/top.svg?react';
 import BottomIcon from '../../../public/bottom.svg?react';
-import { useState } from 'react';
-
-interface Event {
-  day: string;
-  month: string;
-  title: string;
-  time: string;
-  location: string;
-  address: string;
-}
+import { BIEventsItem } from '../../module/Bl-Events';
 
 export const Events = () => {
   const eventsData = [
     {
+      id: 1,
       day: '27',
       month: 'OCT',
       title: 'My Orpheus',
@@ -23,6 +16,7 @@ export const Events = () => {
       address: 'Møre og Romsdal, Norway',
     },
     {
+      id: 2,
       day: '02',
       month: 'NOV',
       title: 'My Orpheus',
@@ -31,6 +25,7 @@ export const Events = () => {
       address: '42 PrinsestraatDen Haag, ZH, 2513 CE, Netherlands',
     },
     {
+      id: 3,
       day: '11',
       month: 'OCT',
       title: 'My Orpheus',
@@ -39,6 +34,7 @@ export const Events = () => {
       address: 'Møre og Romsdal, Norway',
     },
     {
+      id: 4,
       day: '31',
       month: 'NOV',
       title: 'My Orpheus',
@@ -47,6 +43,7 @@ export const Events = () => {
       address: '42 PrinsestraatDen Haag, ZH, 2513 CE, Netherlands',
     },
     {
+      id: 5,
       day: '27',
       month: 'OCT',
       title: 'My Orpheus',
@@ -55,6 +52,7 @@ export const Events = () => {
       address: 'Møre og Romsdal, Norway',
     },
     {
+      id: 6,
       day: '02',
       month: 'NOV',
       title: 'My Orpheus',
@@ -63,6 +61,7 @@ export const Events = () => {
       address: '42 PrinsestraatDen Haag, ZH, 2513 CE, Netherlands',
     },
     {
+      id: 7,
       day: '11',
       month: 'OCT',
       title: 'My Orpheus',
@@ -71,6 +70,7 @@ export const Events = () => {
       address: 'Møre og Romsdal, Norway',
     },
     {
+      id: 8,
       day: '31',
       month: 'NOV',
       title: 'My Orpheus',
@@ -123,40 +123,6 @@ export const Events = () => {
       : 'translateY(0)',
   };
 
-  const EventItem = ({ event }: { event: Event }) => (
-    <article className="grid auto-rows-auto grid-cols-[20%_1fr] items-center gap-[30px] py-7 xl:grid-cols-[170px_auto_370px] [&>*:last-child]:col-span-2 xl:[&>*:last-child]:col-span-1">
-      <div className="text-center">
-        <p className="font-playfair text-7xl leading-[40%] font-bold tracking-[2px] md:text-8xl">
-          {event.day}
-        </p>
-        <p className="mt-[50px] text-[32px] leading-[40%] font-light tracking-[2px]">
-          {event.month}
-        </p>
-      </div>
-      <div className="border-l-1 border-white pb-[10px] pl-[15px]">
-        <h6 className="text-e line-clamp-1 text-3xl font-semibold tracking-[2px] uppercase md:text-4xl">
-          {event.title}
-        </h6>
-        <div className="mt-[25px] text-base leading-normal font-light xl:leading-[40%] [&>p]:mb-[1rem] [&>p]:last:mb-0">
-          <p>{event.time}</p>
-          <p className="uppercase">{event.location}</p>
-          <p className="uppercase">{event.address}</p>
-        </div>
-      </div>
-      <div className="flex items-center justify-center gap-x-[30px] xl:justify-between">
-        <Link
-          to="#"
-          className="font-work flex h-[48px] w-[170px] items-center justify-center border-1 border-white p-[0.313rem] text-sm font-black text-white uppercase transition-all duration-400 hover:opacity-[0.7]"
-        >
-          <span>read more</span>
-        </Link>
-        <button className="font-work flex h-[48px] w-[170px] cursor-pointer items-center justify-center bg-[#FFD700] p-[0.313rem] text-sm font-black text-black uppercase transition-all duration-400 hover:opacity-[0.7]">
-          <span>tickets</span>
-        </button>
-      </div>
-    </article>
-  );
-
   return (
     <section
       style={{
@@ -170,8 +136,8 @@ export const Events = () => {
         </h2>
         <div className="mt-[45px] h-[650px] overflow-hidden xl:h-[365px]">
           <div style={slideStyles}>
-            {visibleEvents.map((event, index) => (
-              <EventItem key={`${currentIndex}-${index}`} event={event} />
+            {visibleEvents.map((item) => (
+              <BIEventsItem item={item} />
             ))}
           </div>
         </div>
