@@ -17,7 +17,7 @@ const Index = () => {
 
   return (
     <>
-      <Banner playBtn={false} src="./../banner/about.jpg" />
+      <Banner playBtn={false} src="./../productions/banner.jpg" />
 
       <article className="relative container mx-auto max-w-[1202px] px-4 pt-[85px] pb-[57px]">
         <div className="grid grid-cols-1 gap-x-[30px] lg:grid-cols-[1fr_570px]">

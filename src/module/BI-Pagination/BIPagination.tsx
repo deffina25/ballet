@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useSearchParams, useNavigate } from 'react-router-dom';
-import { BIPaginationItem } from './BIPaginationItem.tsx';
+import React from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import ReactPaginate from 'react-paginate';
 
 interface Props {
   pageSize: number;
@@ -8,36 +8,32 @@ interface Props {
 }
 
 export const BIPagination: React.FC<Props> = ({ pageSize, total }) => {
-  const totalPages = Math.ceil(total / pageSize);
-
-  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const currentPageFromUrl = parseInt(searchParams.get('page') || '1', 10);
-  const [pageNumber, setPageNumber] = useState(currentPageFromUrl);
+  const query = new URLSearchParams(location.search);
+  const currentPage = Number(query.get('page')) || 1;
 
-  useEffect(() => {
-    setPageNumber(currentPageFromUrl);
-  }, [currentPageFromUrl]);
-
-  const handleClick = (page: number) => {
-    navigate(`?page=${page}`);
-    setPageNumber(page);
+  const handleClick = ({ selected }: { selected: number }) => {
+    navigate(`?page=${selected + 1}`);
   };
 
+  const pageCount = Math.ceil(total / pageSize);
+
   return (
-    <div className="mt-[69px] flex w-full items-center justify-center gap-x-3.5">
-      {Array.from({ length: totalPages }, (_, index) => {
-        const page = index + 1;
-        return (
-          <BIPaginationItem
-            key={page}
-            number={page}
-            isActive={page === pageNumber}
-            onClick={() => handleClick(page)}
-          />
-        );
-      })}
+    <div className="mt-[69px] text-center select-none">
+      <div className="pagination">
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel=">"
+          onPageChange={handleClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel="<"
+          renderOnZeroPageCount={null}
+          forcePage={currentPage - 1}
+        />
+      </div>
     </div>
   );
 };

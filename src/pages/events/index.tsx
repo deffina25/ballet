@@ -80,7 +80,7 @@ const Index = () => {
 
   return (
     <>
-      <Banner playBtn={false} src="./../banner/about.jpg" />
+      <Banner playBtn={false} src="./../events/banner.jpg" />
       <div className="relative container mx-auto min-h-[730px] max-w-[1202px] overflow-hidden px-4 pt-[86px] pb-[78px]">
         <h2 className="font-playfair text-center text-[3.875rem] leading-normal font-bold tracking-[0.125rem] uppercase md:text-[4.875rem] xl:text-left">
           Events

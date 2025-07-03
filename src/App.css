@@ -90,6 +90,37 @@ body {
   }
 }
 
+.pagination {
+  display: inline-block;
+  width: 100%;
+}
+
+.pagination ul li {
+  display: inline-block;
+  margin: 0 7px;
+}
+
+.pagination ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.pagination ul li a {
+  display: inline-block;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #fff;
+}
+
+.pagination ul li a:hover,.pagination ul li.selected a {
+  color: #FFD700;
+  border: 1px solid;
+  border-image-source: linear-gradient(135deg, #FFD700 0%, #0057B8 86.06%);
+  border-image-slice: 1;
+}
+
 /*#root {*/
 /*  max-width: 1170px;*/
 /*  margin: 0 auto;*/
