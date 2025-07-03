@@ -1,6 +1,6 @@
 import { menuTopList } from './list/menuTopList.tsx';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import BottomIcon from '../../../public/language-str.svg?react';
 import React, { useState } from 'react';
 
@@ -12,19 +12,22 @@ interface Props {
 
 export const Menu: React.FC<Props> = ({ isMobile = false }) => {
   const { t } = useTranslation();
+  const location = useLocation(); // Получаем текущий путь
   const [openMenuId, setOpenMenuId] = useState<string | number | null>(null);
 
   const renderMenu = () => {
     const arr = menuTopList(t);
 
     return arr?.map(({ id, name, href, children }: MenuType) => {
+      const isActive = href === location.pathname; // активен, если путь совпадает
+
       if (href) {
         return (
           <li
             key={id}
             className={`border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE] ${
               isMobile ? 'py-4' : ''
-            }`}
+            } ${isActive ? '!border-[#FFFEFE]' : ''}`}
           >
             <Link to={href} className="color-[#FFFEFE]">
               {name}
@@ -42,7 +45,7 @@ export const Menu: React.FC<Props> = ({ isMobile = false }) => {
             isMobile
               ? 'py-4'
               : 'border-b-1 border-transparent transition-all duration-300 hover:border-b-1 hover:border-[#FFFEFE]'
-          }`}
+          } ${isOpen ? 'active-class' : ''}`} // Можно тоже подсветить открытый пункт
         >
           <div
             className="flex cursor-pointer items-center gap-x-[5px]"
@@ -69,25 +72,30 @@ export const Menu: React.FC<Props> = ({ isMobile = false }) => {
                   : 'absolute top-[calc(100%+15px)] left-1/2 min-w-[112px] -translate-x-1/2'
               } z-50 flex flex-col bg-black`}
             >
-              {children.map((child, index) => (
-                <Link
-                  key={child.id}
-                  to={child.href}
-                  style={{
-                    borderBottom:
-                      index !== children.length - 1
-                        ? '1px solid transparent'
-                        : 'none',
-                    borderImage:
-                      index !== children.length - 1
-                        ? 'linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1'
-                        : 'none',
-                  }}
-                  className="flex min-h-[50px] cursor-pointer items-center justify-center px-[5px] py-1 text-center text-[12px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10"
-                >
-                  {child.name}
-                </Link>
-              ))}
+              {children.map((child, index) => {
+                const childIsActive = child.href === location.pathname;
+                return (
+                  <Link
+                    key={child.id}
+                    to={child.href}
+                    style={{
+                      borderBottom:
+                        index !== children.length - 1
+                          ? '1px solid transparent'
+                          : 'none',
+                      borderImage:
+                        index !== children.length - 1
+                          ? 'linear-gradient(90deg, #FFD700 0%, #0057B8 86.06%) 1'
+                          : 'none',
+                    }}
+                    className={`flex min-h-[50px] cursor-pointer items-center justify-center px-[5px] py-1 text-center text-[12px] font-light tracking-[3px] text-white transition-colors duration-400 hover:bg-white/10 ${
+                      childIsActive ? 'font-bold underline' : ''
+                    }`}
+                  >
+                    {child.name}
+                  </Link>
+                );
+              })}
             </div>
           )}
         </li>

@@ -165,7 +165,7 @@ export const Events = () => {
           <div className="mt-[5px] h-[24px]">
             {isLastPage && (
               <Link
-                to="#"
+                to="/events"
                 className="text-[10px] font-light tracking-[2px] uppercase transition-opacity hover:opacity-70 xl:leading-[40%]"
               >
                 See more events

@@ -10,10 +10,10 @@ interface Props {
 interface AboutAttributes {
   title: string;
   text: string;
-  image1: {
+  image_1: {
     url: string;
   };
-  image2: {
+  image_2: {
     url: string;
   };
   url: string;
@@ -46,7 +46,6 @@ export const About: React.FC<Props> = ({ more = true }) => {
         },
       })
       .then((response: any) => {
-        console.log('response.data.data', response.data.data);
         setAbout(response.data.data.about);
       })
       .catch((error: any) => {
@@ -54,7 +53,7 @@ export const About: React.FC<Props> = ({ more = true }) => {
       });
   }, []);
 
-  const { title, text, image1, image2, url } = about || {};
+  const { title, text, image_1, image_2, url } = about || {};
 
   return (
     <>
@@ -89,12 +88,12 @@ export const About: React.FC<Props> = ({ more = true }) => {
             <div className="relative hidden h-full w-full xl:block">
               <img
                 className="z-10 h-[568px] w-[505px]"
-                src={`http://localhost:1337${image1?.url}`}
+                src={`http://localhost:1337${image_1?.url}`}
                 alt="Vladyslav Detiuchenko and Veronika Rakitina"
               />
               <img
                 className="top-[16.875rem] right-[15.938rem] z-20 h-[370px] w-[370px] xl:absolute"
-                src={`http://localhost:1337${image2?.url}`}
+                src={`http://localhost:1337${image_2?.url}`}
                 alt="Vladyslav Detiuchenko and Veronika Rakitina"
               />
             </div>

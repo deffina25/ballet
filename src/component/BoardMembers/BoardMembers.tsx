@@ -1,7 +1,7 @@
 export const BoardMembers = () => {
   return (
     <section className="container mx-auto grid min-h-[540px] max-w-[1202px] grid-cols-1 gap-4 px-4 py-[42px] xl:grid-cols-[570px_1fr] xl:gap-[130px]">
-      <article className="text-base leading-[110.00000000000001%] font-normal">
+      <article className="text-base leading-[110.00000000000001%] font-normal [&>p]:font-normal">
         <h5 className="font-playfair mb-[27px] text-2xl leading-[40%] font-bold">
           BOARD MEMBERS
         </h5>
