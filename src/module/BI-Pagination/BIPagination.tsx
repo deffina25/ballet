@@ -21,7 +21,7 @@ export const BIPagination: React.FC<Props> = ({ pageSize, total }) => {
   const pageCount = Math.ceil(total / pageSize);
 
   return (
-    <div className="mt-[69px] text-center select-none">
+    <div className="mt-[69px] text-center uppercase select-none">
       <div className="pagination">
         <ReactPaginate
           breakLabel="..."

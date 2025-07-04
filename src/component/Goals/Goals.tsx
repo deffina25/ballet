@@ -1,6 +1,6 @@
 export const Goals = () => {
   return (
-    <section className="container mx-auto grid max-w-[1202px] grid-cols-1 gap-[30px] px-4 pt-0 pb-[20px] xl:grid-cols-[1fr_569px] xl:pt-[58px] xl:pb-[115px]">
+    <section className="container mx-auto grid max-w-[1202px] grid-cols-1 gap-[30px] px-4 pt-0 pb-[20px] xl:grid-cols-[1fr_569px] xl:pt-[58px] xl:pb-[93px]">
       <article>
         <h2 className="font-playfair text-center text-[30px] leading-[63px] font-bold tracking-[0.125rem] md:text-[4.875rem] xl:text-left">
           GOALS:

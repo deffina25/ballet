@@ -51,7 +51,7 @@ const Index = () => {
   return (
     <>
       <Banner playBtn={false} src="./../news/banner.jpg" />
-      <div className="mx-automax-w-[1202px] relative container px-4 pt-[86px] pb-[70px]">
+      <div className="relative container mx-auto max-w-[1202px] px-4 pt-[86px] pb-[70px]">
         <h2 className="font-playfair text-center text-[3.875rem] leading-normal font-bold tracking-[0.125rem] uppercase md:text-[4.875rem] xl:text-left">
           News
         </h2>
